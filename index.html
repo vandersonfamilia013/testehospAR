@@ -3,50 +3,109 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Visualização AR - Teste</title>
-
-  <!-- Importando o model-viewer -->
+  <title>Catálogo AR Minimalista</title>
   <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
   <style>
     body {
       font-family: Arial, sans-serif;
-      text-align: center;
       margin: 0;
-      padding: 20px;
-      background: #f3f3f3;
+      padding: 0;
+      background: #f7f7f7;
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
+
+    header {
+      padding: 1rem;
+      background: white;
+      width: 100%;
+      text-align: center;
+      font-size: 1.5rem;
+      font-weight: bold;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .catalogo {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+      width: 90%;
+      max-width: 1200px;
+      margin: 2rem auto;
+    }
+
+    .produto {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      padding: 1rem;
+      text-align: center;
+    }
+
     model-viewer {
       width: 100%;
-      max-width: 600px;
-      height: 400px;
-      margin: auto;
-      background: #fff;
+      height: 300px;
       border-radius: 12px;
-      box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+      background: #eee;
+    }
+
+    h2 {
+      margin: 1rem 0 0.5rem;
+    }
+
+    p {
+      font-size: 0.9rem;
+      color: #666;
     }
   </style>
 </head>
 <body>
+  <header>Catálogo AR</header>
 
-  <h1>Visualize o Produto em 3D</h1>
-  <p>Use a realidade aumentada no seu celular 📱</p>
+  <section class="catalogo">
+    <!-- Produto 1 -->
+    <div class="produto">
+      <model-viewer src="https://vandersonfamilia013.github.io/testehospAR/Mesa.glb" 
+                    alt="Sofá 3D"
+                    ar
+                    ar-modes="webxr scene-viewer quick-look"
+                    camera-controls
+                    shadow-intensity="1"
+                    autoplay>
+      </model-viewer>
+      <h2>Sofá Moderno</h2>
+      <p>Conforto e estilo para sua sala.</p>
+    </div>
 
-  <!-- Modelo 3D -->
-  <model-viewer
-    src="modelo3D.gltf"
-    ios-src="modelo3D.usdz"
-    alt="Modelo 3D"
-    ar
-    ar-modes="webxr scene-viewer quick-look"
-    camera-controls
-    auto-rotate
-    shadow-intensity="1">
-  </model-viewer>
+    <!-- Produto 2 -->
+    <div class="produto">
+      <model-viewer src="https://vandersonfamilia013.github.io/testehospAR/modelo3D.gltf" 
+                    alt="Mesa 3D"
+                    ar
+                    ar-modes="webxr scene-viewer quick-look"
+                    camera-controls
+                    shadow-intensity="1"
+                    autoplay>
+      </model-viewer>
+      <h2>Mesa de Madeira</h2>
+      <p>Ideal para salas de jantar aconchegantes.</p>
+    </div>
 
-  <p>Toque no botão AR para ver no seu ambiente!</p>
-
+    <!-- Produto 3 -->
+    <div class="produto">
+      <model-viewer src="https://vandersonfamilia013.github.io/testehospAR/Mesa.glb" 
+                    alt="Poltrona 3D"
+                    ar
+                    ar-modes="webxr scene-viewer quick-look"
+                    camera-controls
+                    shadow-intensity="1"
+                    autoplay>
+      </model-viewer>
+      <h2>Poltrona Luxo</h2>
+      <p>Design ergonômico e sofisticado.</p>
+    </div>
+  </section>
 </body>
 </html>
-
-
-
