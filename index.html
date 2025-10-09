@@ -4,7 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>AR Minimalista</title>
+
+  <!-- Model Viewer (já vem com suporte a Draco) -->
   <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -65,15 +68,17 @@
   <header>Estantes AR</header>
 
   <section class="catalogo">
+
     <!-- Produto 1 -->
     <div class="produto">
-      <model-viewer src="Sofá Azul.glb" 
+      <model-viewer src="Sofá Azul.glb"
                     alt="Sofá"
                     ar
                     ar-modes="webxr scene-viewer quick-look"
                     camera-controls
                     shadow-intensity="1"
-                    autoplay>
+                    autoplay
+                    draco-decoder-path="assets/draco/"> <!-- Caminho adicionado -->
       </model-viewer>
       <h2>Sofá</h2>
       <p>1</p>
@@ -81,52 +86,34 @@
 
     <!-- Produto 2 -->
     <div class="produto">
-      <model-viewer src="Guarda ROUPAS OFICIAL.glb" 
+      <model-viewer src="Guarda ROUPAS OFICIAL.glb"
                     alt="Guarda Roupas"
                     ar
                     ar-modes="webxr scene-viewer quick-look"
                     camera-controls
                     shadow-intensity="1"
-                    autoplay>
+                    autoplay
+                    draco-decoder-path="assets/draco/">
       </model-viewer>
       <h2>Guarda Roupas</h2>
       <p>2</p>
     </div>
 
-
-     <!-- Produto 3 -->
+    <!-- Produto 3 -->
     <div class="produto">
-      <model-viewer src="Criado Mudo.glb" 
+      <model-viewer src="Criado Mudo.glb"
                     alt="Criado Mudo 3D"
                     ar
                     ar-modes="webxr scene-viewer quick-look"
                     camera-controls
                     shadow-intensity="1"
-                    autoplay>
+                    autoplay
+                    draco-decoder-path="assets/draco/">
       </model-viewer>
       <h2>Criado Mudo</h2>
       <p>1</p>
     </div>
 
-    
   </section>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
