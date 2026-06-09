@@ -7,12 +7,12 @@
   <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
 
   <style>
-    /* Fundo animado com leve tonalidade roxa */
+    /* Fundo animado suave */
     body {
       font-family: 'Poppins', sans-serif;
       margin: 0;
       padding: 0;
-      background: linear-gradient(120deg, #f5f4ff, #e9e7ff, #f5f4ff);
+      background: linear-gradient(120deg, #f7f7f7, #eaeaea, #f7f7f7);
       background-size: 400% 400%;
       animation: gradientMove 15s ease infinite;
       color: #333;
@@ -29,13 +29,13 @@
     /* Cabeçalho */
     header {
       padding: 1rem;
-      background: #1a124a;
-      color: white;
+      background: white;
       width: 100%;
       text-align: center;
       font-size: 1.8rem;
       font-weight: 600;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+      border-bottom: 1px solid #ddd;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -71,19 +71,17 @@
     }
 
     .produto {
-      background: linear-gradient(160deg, #ffffff, #f4f3ff);
-      border: 1px solid #dcd9ff;
+      background: white;
       border-radius: 14px;
-      box-shadow: 0 4px 14px rgba(50,34,138,0.1);
+      box-shadow: 0 4px 14px rgba(0,0,0,0.08);
       padding: 1rem;
       text-align: center;
-      transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
+      transition: transform 0.3s, box-shadow 0.3s;
     }
 
     .produto:hover {
       transform: translateY(-5px);
-      background: linear-gradient(160deg, #ffffff, #0e00a324);
-      box-shadow: 0 8px 20px rgba(50,34,138,0.25);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
     }
 
     model-viewer {
@@ -95,7 +93,6 @@
 
     h2 {
       margin: 1rem 0 0.5rem;
-      color: #1a124a;
     }
 
     p {
@@ -108,124 +105,73 @@
 
   <header>
     <img src="logo.png" alt="Logo"> 
-    Catálogo Virtual - VAMEC
+    Realidade Aumentada - VANDERSON
   </header>
 
   <section class="catalogo">
     <!-- Produto 1 -->
     <div class="produto">
-	<a href="painel001.html">
-      		<model-viewer src="modelos/painel001.glb" alt="Painel" ar camera-controls shadow-intensity="1" environment-image="modelos/environment.hdr" autoplay></model-viewer>
-      		<h2>Painel Sala de Estar</h2>
-	</a>	
-      <p>Visualize no seu Ambiente</p>
+      <model-viewer src="modelos/painel001.glb" alt="Painel" ar camera-controls shadow-intensity="1" autoplay></model-viewer>
+      <h2>Painel de Televisão</h2>
+      <p>1</p>
     </div>
 
     <div class="produto">
-	<a href="mesa003.html">
-      		<model-viewer src="modelos/mesa003.glb" alt="Mesa Moderna" ar camera-controls shadow-intensity="1" environment-image="modelos/environment.hdr" autoplay></model-viewer>
-     	 	<h2>Mesa de Jantar</h2>
-	</a>
-      <p>Visualize no seu Ambiente</p>
+      <model-viewer src="modelos/mesa003.glb" alt="Mesa Moderna" ar camera-controls shadow-intensity="1" autoplay></model-viewer>
+      <h2>Mesa Moderna</h2>
+      <p>1</p>
     </div>
 
     <div class="produto">
-	<a href="mesaecadeiras001.html">
-      		<model-viewer src="modelos/mesaecadeiras001.glb" alt="Mesa de Café" ar camera-controls shadow-intensity="1" environment-image="modelos/environment.hdr" autoplay></model-viewer>
-      		<h2>Mesa de Café</h2>
-	</a>
-      <p>Visualize no seu Ambiente</p>
+      <model-viewer src="modelos/mesaecadeiras001.glb" alt="Mesa de Café" ar camera-controls shadow-intensity="1" autoplay></model-viewer>
+      <h2>Mesa de Café</h2>
+      <p>2</p>
     </div>
 
     <div class="produto">
-	<a href="criadomudo001.html">
-      		<model-viewer src="modelos/criadomudo001.glb" alt="Criado Mudo" ar camera-controls shadow-intensity="1" environment-image="modelos/environment.hdr" autoplay></model-viewer>
-      		<h2>Criado Mudo</h2>
-	</a>
-      <p>Visualize no seu Ambiente</p>
+      <model-viewer src="modelos/criadomudo001.glb" alt="Criado Mudo" ar camera-controls shadow-intensity="1" autoplay></model-viewer>
+      <h2>Criado Mudo</h2>
+      <p>1</p>
     </div>
 
     <div class="produto">
-	<a href="guardaroupas001.html">
-      		<model-viewer src="modelos/guardaroupas001.glb" alt="Guarda Roupas" ar camera-controls shadow-intensity="1" environment-image="modelos/environment.hdr" autoplay></model-viewer>
-      		<h2>Guarda Roupas 8 Portas</h2>
-	</a>
-      <p>Visualize no seu Ambiente</p>
+      <model-viewer src="modelos/guardaroupas001.glb" alt="Guarda Roupas" ar camera-controls shadow-intensity="1" autoplay></model-viewer>
+      <h2>Guarda Roupas Moderno</h2>
+      <p>1</p>
     </div>
 
     <div class="produto">
-	<a href="guardaroupas002.html">
-      		<model-viewer src="modelos/guardaroupas002.glb" alt="Guarda Roupas Espelhado 2" ar camera-controls shadow-intensity="1" environment-image="modelos/environment.hdr" autoplay></model-viewer>
-      		<h2>Guarda Roupas Espelhado</h2>
-	</a>
-      <p>Visualize no seu Ambiente</p>
+      <model-viewer src="modelos/guardaroupas002.glb" alt="Guarda Roupas Espelhado 2" ar camera-controls shadow-intensity="1" autoplay></model-viewer>
+      <h2>Guarda Roupas Espelhado 2</h2>
+      <p>1</p>
     </div>
 
     <div class="produto">
-	<a href="sofa.html">
-      		<model-viewer src="modelos/sofa.glb" alt="Sofá" ar camera-controls shadow-intensity="1" shadow-softness="1" environment-image="modelos/environment.hdr" autoplay></model-viewer>
-      		<h2>Sofá</h2>
-	</a>
-      <p>Visualize no se Ambiente</p>
+      <model-viewer src="modelos/sofa.glb" alt="Sofá" ar camera-controls shadow-intensity="1" autoplay></model-viewer>
+      <h2>Sofá Cinza</h2>
+      <p>1</p>
     </div>
 
     <div class="produto">
-	<a href="CRISTALEIRA2.html">
-      		<model-viewer src="modelos/CRISTALEIRA2.glb" alt="Cristaleira" ar camera-controls shadow-intensity="1" environment-image="modelos/environment.hdr" autoplay></model-viewer>
-      		<h2>Cristaleira</h2>
-	</a>
-      <p>Visualize no seu Ambiente</p>
+      <model-viewer src="modelos/CRISTALEIRA2.glb" alt="Cristaleira" ar camera-controls shadow-intensity="1" autoplay></model-viewer>
+      <h2>Cristaleira</h2>
+      <p>1</p>
     </div>
 
     <div class="produto">
-	<a href="sofa003.html">
-      		<model-viewer src="modelos/sofa003.glb" alt="Sofá Vinho" ar camera-controls shadow-intensity="1" environment-image="modelos/environment.hdr" autoplay></model-viewer>
-      		<h2>Sofá</h2>
-	</a>
-      <p>Visualize no seu Ambiente</p>
+      <model-viewer src="modelos/sofa003.glb" alt="Sofá Vinho" ar camera-controls shadow-intensity="1" autoplay></model-viewer>
+      <h2>Sofá Vinho</h2>
+      <p>1</p>
     </div>
-
-    <div class="produto">
-	<a href="cantinhodocafe.html">
-      		<model-viewer src="modelos/cantinhodocafe.glb" alt="Cafe" ar camera-controls shadow-intensity="1" environment-image="modelos/environment.hdr" autoplay></model-viewer>
-      		<h2>Cantinho do Café</h2>
-	</a>
-      <p>Visualize no seu Ambiente</p>
-    </div>
-
-    <div class="produto">
-	<a href="bancadadj.html">
-      		<model-viewer src="modelos/bancadadj.glb" alt="bancada" ar camera-controls shadow-intensity="1" shadow-softness="1" environment-image="modelos/environment.hdr" autoplay></model-viewer>
-      		<h2>Bancada DJ OMEGA</h2>
-	</a>
-      <p>Visualize no seu Ambiente</p>
-    </div>
-    
-    <div class="produto">
-	<a href="cama001.html">
-      		<model-viewer src="modelos/cama001.glb" alt="cama" ar camera-controls shadow-intensity="1" environment-image="modelos/environment.hdr" autoplay></model-viewer>
-      		<h2>Cama</h2>
-	</a>
-      <p>Visualize no seu Ambiente</p>
-    </div>
-
-
-    
-
-
   </section>
 
   <script>
-
-       	document.querySelectorAll("model-viewer").forEach(model => {
-
-  			model.setAttribute("ar-scale", "fixed");
-  			model.setAttribute("disable-zoom", "");
-			
-		});
+    // 🌤️ Define o ambiente HDR para todos os modelos
+    const modelos = document.querySelectorAll("model-viewer");
+    modelos.forEach(mv => {
+      mv.setAttribute("environment-image", "modelos/environment.hdr");
+    });
   </script>
 
 </body>
 </html>
-
-
